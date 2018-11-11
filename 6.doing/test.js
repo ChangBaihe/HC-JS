@@ -99,5 +99,6 @@ const testCallApplyBind = () => {
 
 //测试
 (async () => {
-    testCallApplyBind();
+    let a = [];
+    console.log();
 })();
