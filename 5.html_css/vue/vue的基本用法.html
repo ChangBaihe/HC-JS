@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <script src="./lib/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="浪起来" @click='change'>
+        <input type="button" value="低调" @click='reset'>
+        <h1>{{ msg }}</h1>
+    </div>
+    <script>
+        Vue.config.devtools = true;
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                msg: "猥琐发育，别浪！！",
+                intervalId: null
+            },
+            methods: {
+                change (){
+                    if (!this.intervalId) {
+                        this.intervalId = setInterval(() => {
+                            let end = this.msg.substring(0,1);
+                            let start = this.msg.substring(1);
+                            this.msg = start + end;
+                        }, 500);
+                    }
+                },
+                reset (){
+                    clearInterval(this.intervalId);
+                    this.intervalId = null;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
