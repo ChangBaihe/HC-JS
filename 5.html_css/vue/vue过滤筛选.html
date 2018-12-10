@@ -68,13 +68,15 @@
             },
             methods: {
                 add() {
-                    this.list.push({
-                        id: this.id,
-                        name: this.name,
-                        ctime: new Date()
-                    });
-                    this.id = '';
-                    this.name = '';
+                    if (this.id && this.name) {
+                        this.list.push({
+                            id: this.id,
+                            name: this.name,
+                            ctime: new Date()
+                        });
+                        this.id = '';
+                        this.name = '';
+                    }
                 },
                 search(key) {
                     return this.list.filter((x) => {
