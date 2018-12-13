@@ -97,7 +97,33 @@ const testCallApplyBind = () => {
     console.log(str);
 };
 
+const testProcess = () => {
+    
+};
+
 //测试
 (async () => {
-    console.log();
+    // let a = [1,2,3,4,5,6];
+    // let b = [11,10,9,8,7];
+    // console.log(a,b);
+    // a.length=0;
+    // [a,b]= [b,a];
+    // console.log(a,b);
+    // let a = `
+    // <table>
+    //     <tbody>
+    //         <tr>
+    //             <td>A.<span class='matd inline'>${'\{ 0\}'}$</span></td>
+    //             <td>C.<span class='matd inline'>${'\{ x|0 &lt; x &lt; 3\}'}$</span></td>
+    //         </tr>
+    //         <tr class='odd'>
+    //             <td>B.<span class='math inline'>${'\{ x|x &lt; 0\}'}$</span></td>
+    //             <td>D.<span class='math inline'>${'\{ 1,\, 2\}'}$</span></td>
+    //         </tr>
+    //     </tbody>
+    // </table>
+    // `;
+    // let b = a.replace(/<span><\/span>/,'');
+    // console.log(b);
+    testProcess();
 })();
